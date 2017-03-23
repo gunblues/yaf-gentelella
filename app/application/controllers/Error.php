@@ -9,6 +9,7 @@
 class ErrorController extends Yaf_Controller_Abstract {
 
     public function errorAction($exception) {
+        error_log("exception - " . $exception->getMessage());
 
         /* error occurs */
         switch ($exception->getCode()) {
@@ -16,13 +17,14 @@ class ErrorController extends Yaf_Controller_Abstract {
             case YAF_ERR_NOTFOUND_CONTROLLER:
             case YAF_ERR_NOTFOUND_ACTION:
             case YAF_ERR_NOTFOUND_VIEW:
-                $this->redirect("/");
-                return;
+                $this->display("page404");
+                break;
             default :
-                error_log("exception - " . $exception->getMessage());
+                $this->display("page500");
                 break;
         }
 
+        exit; 
     }
 }
 

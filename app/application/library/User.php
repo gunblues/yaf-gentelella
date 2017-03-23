@@ -53,6 +53,7 @@ class User
             "displayName" => $userProfile->displayName,
             "photoURL" => ($userProfile->photoURL ? $userProfile->photoURL : self::$defaultPhotoURL),
             "email" => $userProfile->email,
+            "role" => "user",
         );
 
     } //}}}
@@ -62,6 +63,7 @@ class User
             "displayName" => "Guest",
             "photoURL" => self::$defaultPhotoURL,
             "email" => null,
+            "role" => "guest",
         );
     } //}}}
 }

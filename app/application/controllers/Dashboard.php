@@ -9,17 +9,15 @@
 class DashboardController extends BaseController 
 {
     public function firstAction() {
-        //$this->needLogin();
+        $this->needLogin();
         $this->renderPage();
     }
 
     public function secondAction() {
-        //$this->needLogin();
         $this->renderPage();
     }
 
     public function thirdAction() {
-        //$this->needLogin();
         $this->renderPage();
     }
 

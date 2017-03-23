@@ -13,6 +13,12 @@ require dirname(__DIR__).'/config/HybridAuthConfig.php';
 class LoginController extends Yaf_Controller_Abstract 
 {
     public function indexAction() {
+        $provider = filter_var($this->getRequest()->getQuery('provider'), FILTER_SANITIZE_STRING);
+        if (empty($provider)) {
+            $this->display("../login/login"); 
+            exit; 
+        }
+        
         $done = filter_var($this->getRequest()->getQuery('done'), FILTER_SANITIZE_STRING);
 
         if (empty($done)) {
@@ -24,10 +30,6 @@ class LoginController extends Yaf_Controller_Abstract
             exit;
         }
 
-        $provider = filter_var($this->getRequest()->getQuery('provider'), FILTER_SANITIZE_STRING);
-        if (empty($provider)) {
-            return false;
-        }
         
         try{
             global $HybridAuthConfig;

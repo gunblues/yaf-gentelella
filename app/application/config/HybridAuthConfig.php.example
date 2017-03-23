@@ -1,0 +1,16 @@
+<?php
+
+$HybridAuthConfig = array(
+    "base_url" => "http://your_host/login/hybridauth",
+    "providers" => array (
+        "Google" => array (
+            "enabled" => true,
+            "keys"    => array ( "id" => "your_id", "secret" => "your_secret" ),
+            "scope"           => "https://www.googleapis.com/auth/userinfo.profile ". // optional
+            "https://www.googleapis.com/auth/userinfo.email"   , // optional
+            "access_type"     => "offline",   // optional
+            "approval_prompt" => "force",     // optional
+            "hd"              => "domain.com" // optional
+        )));
+
+// vim: expandtab softtabstop=4 tabstop=4 shiftwidth=4 ts=4 sw=4

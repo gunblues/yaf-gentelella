@@ -6,7 +6,7 @@ $HybridAuthConfig = array(
         "Google" => array (
             "enabled" => true,
             "keys"    => array ( "id" => "your_id", "secret" => "your_secret" ),
-            "scope"           => "https://www.googleapis.com/auth/userinfo.profile", // optional
+            "scope"           => "https://www.googleapis.com/auth/userinfo.profile ". // optional
             "https://www.googleapis.com/auth/userinfo.email"   , // optional
             "access_type"     => "offline",   // optional
             "approval_prompt" => "force",     // optional

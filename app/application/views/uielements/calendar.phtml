@@ -54,4 +54,11 @@
         </div>
         <!-- /page content -->
 
+        <script>
+            $( document ).ready(function() {
+                $('head').append('<link rel="stylesheet" href="/assets/vendors/fullcalendar/dist/fullcalendar.min.css" type="text/css">');
+                $('head').append('<link rel="stylesheet" href="/assets/vendors/fullcalendar/dist/fullcalendar.print.css" type="text/css">');
+                $('<script>').attr('type', 'text/javascript').attr('src', '/assets/vendors/fullcalendar/dist/fullcalendar.min.js').appendTo('body');
+            });
+        </script>
 

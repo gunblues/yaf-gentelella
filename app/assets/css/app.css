@@ -1,0 +1,8 @@
+/* line 1, ../scss/component/_pageContent.scss */
+#loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  margin-top: -64px;
+}

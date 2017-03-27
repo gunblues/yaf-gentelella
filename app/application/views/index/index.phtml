@@ -27,6 +27,8 @@
 
     <!-- Custom Theme Style -->
     <link href="/assets/css/custom.min.css" rel="stylesheet">
+
+    <link href="/assets/css/app.css?rel=1490604441173" rel="stylesheet">
     <!-- jQuery -->
     <script src="/assets/vendors/jquery/dist/jquery.min.js"></script>
   </head>
@@ -271,6 +273,10 @@
         </div>
         <!-- /top navigation -->
 
+        <div id="loading">
+            <img src="/assets/images/loading.gif">
+        </div>
+
         <!-- page content -->
 		<div id="page-content">
 			<?php include($pageContent); ?>	
@@ -325,68 +331,7 @@
 
     <!-- Custom Theme Scripts -->
     <script src="/assets/js/custom.min.js"></script>
-    <script src="/assets/vendors/jquery-pjax/jquery.pjax.js"></script>
-
-    <script>
-        if ($.support.pjax) {
-            console.log('support pjax');
-
-            $.pjax.defaults.timeout = false;
-            $(document).pjax('a.pjax', '#page-content');
-            $(document).on('pjax:beforeSend', function(event, xhr, settings) {
-                console.log('pjax beforeSend');
-            });
-            $(document).on('pjax:send', function(){
-                console.log('pjax send');
-            });
-            $(document).on('pjax:complete', function(){
-                console.log('pjax complete');
-
-		        init_sparklines();
-		        init_flot_chart();
-		        init_wysiwyg();
-		        init_InputMask();
-		        init_JQVmap();
-		        init_cropper();
-		        init_knob();
-		        init_IonRangeSlider();
-		        init_ColorPicker();
-		        init_TagsInput();
-		        init_parsley();
-		        init_daterangepicker();
-		        init_daterangepicker_right();
-		        init_daterangepicker_single_call();
-		        init_daterangepicker_reservation();
-		        init_SmartWizard();
-		        init_EasyPieChart();
-		        init_charts();
-		        init_echarts();
-		        init_morris_charts();
-		        init_skycons();
-		        init_select2();
-		        init_validator();
-		        init_DataTables();
-		        init_chart_doughnut();
-		        init_gauge();
-		        init_PNotify();
-		        init_starrr();
-		        init_calendar();
-		        init_compose();
-		        init_CustomNotification();
-		        init_autosize();
-		        init_autocomplete();
-
-            });
-            $(document).on('pjax:error', function(err) {
-                console.log('pjax:error');
-                console.log(err);
-            });
-            $(document).on('pjax:timeout', function() {
-                console.log('pjax:timeout');
-            });
-        }
-    </script>
-
+    <script src="/assets/js/app.js?rel=1490604441173"></script>
 
   </body>
 </html>

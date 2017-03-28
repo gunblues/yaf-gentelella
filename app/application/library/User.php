@@ -13,6 +13,7 @@ class User
     }
 
     static public function cleanData() {
+        self::init();
         if (self::isLoggedIn()) {
             session_destroy();
         }

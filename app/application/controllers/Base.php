@@ -111,7 +111,7 @@ class BaseController extends Yaf_Controller_Abstract
 
     function needLogin() { //{{{
         if (!User::isLoggedIn()) {
-            $this->display("../login/login"); 
+            header("Location: /login"); 
             exit;    
         }
     } //}}}

@@ -6,10 +6,17 @@
  * @see http://www.php.net/manual/en/class.yaf-controller-abstract.php
  */
 
+require dirname(__DIR__).'/vendor/autoload.php';
+require dirname(__DIR__).'/config/HybridAuthConfig.php';
+
 class LogoutController extends Yaf_Controller_Abstract 
 {
     public function indexAction() {
         User::cleanData();
+
+        global $HybridAuthConfig;
+        $hybridauth = new Hybrid_Auth($HybridAuthConfig);
+        $hybridauth->logoutAllProviders();
 
         header("Location: /");
         exit;

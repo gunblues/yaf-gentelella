@@ -13,6 +13,11 @@ require dirname(__DIR__).'/config/HybridAuthConfig.php';
 class LoginController extends Yaf_Controller_Abstract 
 {
     public function indexAction() {
+        if (User::isLoggedIn()) {
+            header("Location: $done");
+            exit;
+        }
+ 
         $provider = filter_var($this->getRequest()->getQuery('provider'), FILTER_SANITIZE_STRING);
         if (empty($provider)) {
             $this->display("../login/login"); 
@@ -24,13 +29,7 @@ class LoginController extends Yaf_Controller_Abstract
         if (empty($done)) {
             $done = "/";
         }
-
-        if (User::isLoggedIn()) {
-            header("Location: $done");
-            exit;
-        }
-
-        
+       
         try{
             global $HybridAuthConfig;
             $hybridauth = new Hybrid_Auth($HybridAuthConfig);

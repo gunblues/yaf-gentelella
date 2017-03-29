@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                 files: [
                 {
                     src: [
-                        'app/assets/js/vendor/jquery-pjax/jquery.pjax.js',
+                        'app/assets/vendors/jquery-pjax/jquery.pjax.js',
                         'app/assets/js/library/MyUtil.js',
                         'app/assets/js/controllers/LibCtrl.js',
                         'app/assets/js/controllers/PageInitCtrl.js'

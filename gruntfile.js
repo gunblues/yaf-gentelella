@@ -58,6 +58,36 @@ module.exports = function (grunt) {
                 files: [
                 {
                     src: [
+                        'app/assets/vendors/datatables.net/js/jquery.dataTables.min.js',
+                        'app/assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js',
+                        'app/assets/vendors/datatables.net-buttons/js/dataTables.buttons.min.js',
+                        'app/assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js',
+                        'app/assets/vendors/datatables.net-buttons/js/buttons.flash.min.js',
+                        'app/assets/vendors/datatables.net-buttons/js/buttons.html5.min.js',
+                        'app/assets/vendors/datatables.net-buttons/js/buttons.print.min.js',
+                        'app/assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js',
+                        'app/assets/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js',
+                        'app/assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js',
+                        'app/assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js',
+                        'app/assets/vendors/datatables.net-scroller/js/dataTables.scroller.min.js'
+                    ],
+                    dest: 'app/assets/js/datatables.js'
+                },
+                {
+                    src: [
+                        'app/assets/vendors/Flot/jquery.flot.js',
+                        'app/assets/vendors/Flot/jquery.flot.pie.js',
+                        'app/assets/vendors/Flot/jquery.flot.time.js',
+                        'app/assets/vendors/Flot/jquery.flot.stack.js',
+                        'app/assets/vendors/Flot/jquery.flot.resize.js',
+                        'app/assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js',
+                        'app/assets/vendors/flot-spline/js/jquery.flot.spline.min.js',
+                        'app/assets/vendors/flot.curvedlines/curvedLines.js'
+                    ],
+                    dest: 'app/assets/js/flot.js'
+                },
+                {
+                    src: [
                         'app/assets/vendors/jquery-pjax/jquery.pjax.js',
                         'app/assets/js/library/MyUtil.js',
                         'app/assets/js/controllers/LibCtrl.js',

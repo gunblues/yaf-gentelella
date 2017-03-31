@@ -115,4 +115,8 @@ class BaseController extends Yaf_Controller_Abstract
             exit;    
         }
     } //}}}
+
+    function logExcpetion($e) { //{{{
+        error_log("Exception: ". $this->getRequest()->getControllerName() . " " . $this->getRequest()->getActionName() . " " . $e->getMessage());
+    } //}}}
 }
